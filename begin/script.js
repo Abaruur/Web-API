@@ -34,5 +34,16 @@ fetch("https://hplussport.com/api/products?order=name")
       image.setAttribute("src", productImg);
       // add to the web page
       document.body.appendChild(image);
+
+      // Challenge Display data on a webpage
+      // Now we are going to Display the price of each data
+
+      var Price = jsonData[items].price;
+      //create HTML element for the price
+      var priceElement = document.createElement("h6");
+      // Add the price data to this price element
+      priceElement.inner.innerHTML = Price;
+      // Add to the page
+      document.body.appendChild(priceElement);
     }
   });
